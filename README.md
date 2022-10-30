@@ -24,7 +24,6 @@
 [`modern-errors`](https://github.com/ehmicky/modern-errors).
 
 ```js
-// `errors.js`
 import modernErrors from 'modern-errors'
 import modernErrorsStack from 'modern-errors-stack'
 
