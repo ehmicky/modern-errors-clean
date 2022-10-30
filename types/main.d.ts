@@ -1,12 +1,13 @@
-/**
- * `template-name` options
- */
-export interface Options {}
+import type { Info } from '../main.js'
 
 /**
+ * `modern-errors-stack` plugin.
  *
- * @example
- * ```js
- * ```
+ * This plugin
+ * [cleans up stack traces](https://github.com/sindresorhus/clean-stack).
  */
-export default function templateName(value: any, options?: Options): object
+declare const plugin: {
+  name: 'stack'
+  properties: (info: Info['properties']) => { stack: string }
+}
+export default plugin
