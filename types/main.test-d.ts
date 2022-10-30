@@ -1,11 +1,11 @@
 import { expectType, expectError } from 'tsd'
 
-import modernErrors from '../main.js'
-import plugin from './stack.js'
+import modernErrors from 'modern-errors'
+import modernErrorsStack from 'modern-errors-stack'
 
-const AnyError = modernErrors([plugin])
+const AnyError = modernErrors([modernErrorsStack])
 const error = new AnyError('', { cause: '' })
 
-expectError(modernErrors([plugin], { stack: undefined }))
+expectError(modernErrors([modernErrorsStack], { stack: undefined }))
 
 expectType<string | undefined>(error.stack)
