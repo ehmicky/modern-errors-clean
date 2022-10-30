@@ -32,7 +32,7 @@ export const AnyError = modernErrors([modernErrorsStack])
 // ...
 ```
 
-Before:
+`error.stack` (before):
 
 ```
 Error: message
@@ -46,7 +46,7 @@ Error: message
     at startup (node.js:139:18)
 ```
 
-After:
+`error.stack` (after):
 
 ```
 Error: message
