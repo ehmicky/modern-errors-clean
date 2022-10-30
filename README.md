@@ -1,19 +1,57 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ehmicky/design/main/modern-errors/modern-errors_dark.svg"/>
+  <img alt="modern-errors logo" src="https://raw.githubusercontent.com/ehmicky/design/main/modern-errors/modern-errors.svg" width="600"/>
+</picture>
+
 [![Codecov](https://img.shields.io/codecov/c/github/ehmicky/modern-errors-stack.svg?label=tested&logo=codecov)](https://codecov.io/gh/ehmicky/modern-errors-stack)
 [![TypeScript](https://img.shields.io/badge/-typed-brightgreen?logo=typescript&colorA=gray&logoColor=0096ff)](/types/main.d.ts)
 [![Node](https://img.shields.io/node/v/modern-errors-stack.svg?logo=node.js&logoColor=66cc33)](https://www.npmjs.com/package/modern-errors-stack)
 [![Twitter](https://img.shields.io/badge/%E2%80%8B-twitter-brightgreen.svg?logo=twitter)](https://twitter.com/intent/follow?screen_name=ehmicky)
 [![Medium](https://img.shields.io/badge/%E2%80%8B-medium-brightgreen.svg?logo=medium)](https://medium.com/@ehmicky)
 
-`modern-errors` plugin to clean stack traces.
-
-Work in progress!
+`modern-errors` plugin to
+[clean stack traces](https://github.com/sindresorhus/clean-stack).
 
 # Features
 
+- Shorten file paths, making them relative to the current directory
+- Replace the home directory with `~`
+- Remove unhelpful internal Node.js entries
+
 # Example
 
+[Adding the plugin](https://github.com/ehmicky/modern-errors#adding-plugins) to
+[`modern-errors`](https://github.com/ehmicky/modern-errors).
+
 ```js
+// `errors.js`
+import modernErrors from 'modern-errors'
 import modernErrorsStack from 'modern-errors-stack'
+
+export const AnyError = modernErrors([modernErrorsStack])
+// ...
+```
+
+Before:
+
+```
+Error: message
+    at exampleFunction (/home/ehmicky/repo/dev/example.js:7:2)
+    at main (/home/ehmicky/repo/dev/main.js:2:15)
+    at Module._compile (module.js:409:26)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+    at Function.Module.runMain (module.js:441:10)
+    at startup (node.js:139:18)
+```
+
+After:
+
+```
+Error: message
+    at exampleFunction (dev/example.js:7:2)
+    at main (dev/main.js:2:15)
 ```
 
 # Install
@@ -22,25 +60,18 @@ import modernErrorsStack from 'modern-errors-stack'
 npm install modern-errors-stack
 ```
 
-This package is an ES module and must be loaded using
+This package requires Node.js. It is an ES module and must be loaded using
 [an `import` or `import()` statement](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c),
 not `require()`.
 
 # API
 
-## modernErrorsStack(value, options?)
+## modernErrorsStack
 
-`value` `any`\
-`options` [`Options?`](#options)\
-_Return value_: [`object`](#return-value)
+_Type_: `Plugin`
 
-### Options
-
-Object with the following properties.
-
-### Return value
-
-Object with the following properties.
+Plugin object to
+[pass to `modernErrors()`](https://github.com/ehmicky/modern-errors#adding-plugins).
 
 # Related projects
 

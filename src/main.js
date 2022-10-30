@@ -11,7 +11,6 @@ const properties = function ({ error }) {
   return { stack }
 }
 
-// eslint-disable-next-line import/no-default-export
 export default {
   name: 'stack',
   properties,
