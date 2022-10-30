@@ -1,25 +1,29 @@
 import { cwd as getCwd } from 'process'
 
 import test from 'ava'
+import modernErrors from 'modern-errors'
+import modernErrorsStack from 'modern-errors-stack'
 
-// eslint-disable-next-line no-restricted-imports
-import STACK_PLUGIN from '../../src/core_plugins/stack.js'
-import { defineClassOpts } from '../helpers/main.js'
-
-const { TestError } = defineClassOpts()
-const { TestError: StackError } = defineClassOpts({}, {}, [STACK_PLUGIN])
-const testError = new TestError('test')
+const StackAnyError = modernErrors([modernErrorsStack])
+StackAnyError.subclass('UnknownError')
+const StackError = StackAnyError.subclass('StackError')
 const stackError = new StackError('test')
+
+const NoStackAnyError = modernErrors()
+NoStackAnyError.subclass('UnknownError')
+const NoStackError = NoStackAnyError.subclass('NoStackError')
+const noStackError = new NoStackError('test')
+
 const cwd = getCwd()
 
 // The first lines sometimes contain a preview
 const isCleanStack = function (stack) {
-  return stack.split('\n').slice(1).join('\n').includes(cwd)
+  return !stack.split('\n').slice(1).join('\n').includes(cwd)
 }
 
 test('stack is cleaned', (t) => {
-  t.true(isCleanStack(testError.stack))
-  t.false(isCleanStack(stackError.stack))
+  t.false(isCleanStack(noStackError.stack))
+  t.true(isCleanStack(stackError.stack))
 })
 
 test('stack remains non-enumerable', (t) => {
