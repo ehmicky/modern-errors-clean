@@ -1,3 +1,9 @@
+# 2.0.0
+
+## Breaking changes
+
+- Renamed the package from `modern-errors-stack` to `modern-errors-clean`
+
 # 1.2.0
 
 ## Features
