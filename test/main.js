@@ -1,4 +1,4 @@
-import { cwd as getCwd } from 'process'
+import { cwd as getCwd } from 'node:process'
 
 import test from 'ava'
 import modernErrors from 'modern-errors'

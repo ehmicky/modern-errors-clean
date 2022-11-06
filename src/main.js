@@ -1,4 +1,4 @@
-import process from 'process'
+import process from 'node:process'
 
 import cleanStack from 'clean-stack'
 
