@@ -3,9 +3,9 @@
   <img alt="modern-errors logo" src="https://raw.githubusercontent.com/ehmicky/design/main/modern-errors/modern-errors.svg" width="600"/>
 </picture>
 
-[![Node](https://img.shields.io/badge/-Node.js-808080?logo=node.js&colorA=404040&logoColor=66cc33)](https://www.npmjs.com/package/modern-errors-stack)
+[![Node](https://img.shields.io/badge/-Node.js-808080?logo=node.js&colorA=404040&logoColor=66cc33)](https://www.npmjs.com/package/modern-errors-clean)
 [![TypeScript](https://img.shields.io/badge/-Typed-808080?logo=typescript&colorA=404040&logoColor=0096ff)](/types/main.d.ts)
-[![Codecov](https://img.shields.io/badge/-Tested%20100%25-808080?logo=codecov&colorA=404040)](https://codecov.io/gh/ehmicky/modern-errors-stack)
+[![Codecov](https://img.shields.io/badge/-Tested%20100%25-808080?logo=codecov&colorA=404040)](https://codecov.io/gh/ehmicky/modern-errors-clean)
 [![Twitter](https://img.shields.io/badge/-Twitter-808080.svg?logo=twitter&colorA=404040)](https://twitter.com/intent/follow?screen_name=ehmicky)
 [![Medium](https://img.shields.io/badge/-Medium-808080.svg?logo=medium&colorA=404040)](https://medium.com/@ehmicky)
 
@@ -26,9 +26,9 @@
 
 ```js
 import modernErrors from 'modern-errors'
-import modernErrorsStack from 'modern-errors-stack'
+import modernErrorsClean from 'modern-errors-clean'
 
-export const AnyError = modernErrors([modernErrorsStack])
+export const AnyError = modernErrors([modernErrorsClean])
 // ...
 ```
 
@@ -57,7 +57,7 @@ Error: message
 # Install
 
 ```bash
-npm install modern-errors-stack
+npm install modern-errors-clean
 ```
 
 This package requires Node.js >=14.18.0. It is an ES module and must be loaded
@@ -67,7 +67,7 @@ not `require()`.
 
 # API
 
-## modernErrorsStack
+## modernErrorsClean
 
 _Type_: `Plugin`
 
@@ -117,6 +117,6 @@ If you would like to help us fix a bug or add a new feature, please check our
 <!-- ALL-CONTRIBUTORS-LIST:START -->
 <!-- prettier-ignore -->
 <!--
-<table><tr><td align="center"><a href="https://twitter.com/ehmicky"><img src="https://avatars2.githubusercontent.com/u/8136211?v=4" width="100px;" alt="ehmicky"/><br /><sub><b>ehmicky</b></sub></a><br /><a href="https://github.com/ehmicky/modern-errors-stack/commits?author=ehmicky" title="Code">💻</a> <a href="#design-ehmicky" title="Design">🎨</a> <a href="#ideas-ehmicky" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ehmicky/modern-errors-stack/commits?author=ehmicky" title="Documentation">📖</a></td></tr></table>
+<table><tr><td align="center"><a href="https://twitter.com/ehmicky"><img src="https://avatars2.githubusercontent.com/u/8136211?v=4" width="100px;" alt="ehmicky"/><br /><sub><b>ehmicky</b></sub></a><br /><a href="https://github.com/ehmicky/modern-errors-clean/commits?author=ehmicky" title="Code">💻</a> <a href="#design-ehmicky" title="Design">🎨</a> <a href="#ideas-ehmicky" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ehmicky/modern-errors-clean/commits?author=ehmicky" title="Documentation">📖</a></td></tr></table>
  -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->

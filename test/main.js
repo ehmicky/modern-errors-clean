@@ -2,9 +2,9 @@ import { cwd as getCwd } from 'node:process'
 
 import test from 'ava'
 import modernErrors from 'modern-errors'
-import modernErrorsStack from 'modern-errors-stack'
+import modernErrorsClean from 'modern-errors-clean'
 
-const StackAnyError = modernErrors([modernErrorsStack])
+const StackAnyError = modernErrors([modernErrorsClean])
 StackAnyError.subclass('UnknownError')
 const StackError = StackAnyError.subclass('StackError')
 const stackError = new StackError('test')

@@ -1,5 +1,5 @@
 {
-  "name": "modern-errors-stack",
+  "name": "modern-errors-clean",
   "version": "1.2.0",
   "type": "module",
   "exports": {
@@ -39,10 +39,10 @@
     "typescript"
   ],
   "license": "MIT",
-  "homepage": "https://www.github.com/ehmicky/modern-errors-stack",
-  "repository": "ehmicky/modern-errors-stack",
+  "homepage": "https://www.github.com/ehmicky/modern-errors-clean",
+  "repository": "ehmicky/modern-errors-clean",
   "bugs": {
-    "url": "https://github.com/ehmicky/modern-errors-stack/issues"
+    "url": "https://github.com/ehmicky/modern-errors-clean/issues"
   },
   "author": "ehmicky <ehmicky@gmail.com> (https://github.com/ehmicky)",
   "directories": {
