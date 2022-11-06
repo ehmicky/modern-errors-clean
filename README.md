@@ -10,7 +10,7 @@
 [![Medium](https://img.shields.io/badge/%E2%80%8B-medium-brightgreen.svg?logo=medium)](https://medium.com/@ehmicky)
 
 [`modern-errors`](https://github.com/ehmicky/modern-errors)
-[plugin](https://github.com/ehmicky/modern-errors#plugins-1) to
+[plugin](https://github.com/ehmicky/modern-errors#-plugins) to
 [clean stack traces](https://github.com/sindresorhus/clean-stack).
 
 # Features
