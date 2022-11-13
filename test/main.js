@@ -1,17 +1,15 @@
 import { cwd as getCwd } from 'node:process'
 
 import test from 'ava'
-import modernErrors from 'modern-errors'
+import ModernError from 'modern-errors'
 import modernErrorsClean from 'modern-errors-clean'
 
-const StackBaseError = modernErrors([modernErrorsClean])
-StackBaseError.subclass('UnknownError')
-const StackError = StackBaseError.subclass('StackError')
+const StackError = ModernError.subclass('StackBaseError', {
+  plugins: [modernErrorsClean],
+})
 const stackError = new StackError('test')
 
-const NoStackBaseError = modernErrors()
-NoStackBaseError.subclass('UnknownError')
-const NoStackError = NoStackBaseError.subclass('NoStackError')
+const NoStackError = ModernError.subclass('NoStackBaseError')
 const noStackError = new NoStackError('test')
 
 const cwd = getCwd()
