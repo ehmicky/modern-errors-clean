@@ -3,8 +3,8 @@ import { expectType, expectError } from 'tsd'
 import modernErrors from 'modern-errors'
 import modernErrorsClean from 'modern-errors-clean'
 
-const AnyError = modernErrors([modernErrorsClean])
-const error = new AnyError('', { cause: '' })
+const BaseError = modernErrors([modernErrorsClean])
+const error = new BaseError('', { cause: '' })
 
 expectError(modernErrors([modernErrorsClean], { stack: undefined }))
 

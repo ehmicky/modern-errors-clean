@@ -28,7 +28,7 @@
 import modernErrors from 'modern-errors'
 import modernErrorsClean from 'modern-errors-clean'
 
-export const AnyError = modernErrors([modernErrorsClean])
+export const BaseError = modernErrors([modernErrorsClean])
 // ...
 ```
 

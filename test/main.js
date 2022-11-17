@@ -4,14 +4,14 @@ import test from 'ava'
 import modernErrors from 'modern-errors'
 import modernErrorsClean from 'modern-errors-clean'
 
-const StackAnyError = modernErrors([modernErrorsClean])
-StackAnyError.subclass('UnknownError')
-const StackError = StackAnyError.subclass('StackError')
+const StackBaseError = modernErrors([modernErrorsClean])
+StackBaseError.subclass('UnknownError')
+const StackError = StackBaseError.subclass('StackError')
 const stackError = new StackError('test')
 
-const NoStackAnyError = modernErrors()
-NoStackAnyError.subclass('UnknownError')
-const NoStackError = NoStackAnyError.subclass('NoStackError')
+const NoStackBaseError = modernErrors()
+NoStackBaseError.subclass('UnknownError')
+const NoStackError = NoStackBaseError.subclass('NoStackError')
 const noStackError = new NoStackError('test')
 
 const cwd = getCwd()
