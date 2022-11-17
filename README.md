@@ -25,10 +25,12 @@
 [`modern-errors`](https://github.com/ehmicky/modern-errors).
 
 ```js
-import modernErrors from 'modern-errors'
+import ModernError from 'modern-errors'
 import modernErrorsClean from 'modern-errors-clean'
 
-export const BaseError = modernErrors([modernErrorsClean])
+export const BaseError = ModernError.subclass('BaseError', {
+  plugins: [modernErrorsClean],
+})
 // ...
 ```
 
@@ -72,7 +74,7 @@ not `require()`.
 _Type_: `Plugin`
 
 Plugin object to
-[pass to `modernErrors()`](https://github.com/ehmicky/modern-errors#adding-plugins).
+[pass to the `plugins` option of `ErrorClass.subclass()`](https://github.com/ehmicky/modern-errors#adding-plugins).
 
 # Related projects
 
