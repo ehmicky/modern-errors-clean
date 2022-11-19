@@ -1,3 +1,9 @@
+# 3.1.0
+
+## Features
+
+- Upgrade to the latest version of `modern-errors`
+
 # 3.0.0
 
 ## Breaking changes
