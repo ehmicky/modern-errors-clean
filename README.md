@@ -95,6 +95,8 @@ Plugin object to pass to the
   HTTP error responses
 - [`modern-errors-winston`](https://github.com/ehmicky/modern-errors-winston):
   Log errors with Winston
+- [`modern-errors-switch`](https://github.com/ehmicky/modern-errors-switch):
+  Execute class-specific logic
 
 # Support
 
