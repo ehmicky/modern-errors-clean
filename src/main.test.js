@@ -2,6 +2,7 @@ import { cwd as getCwd } from 'node:process'
 
 import test from 'ava'
 import ModernError from 'modern-errors'
+
 import modernErrorsClean from 'modern-errors-clean'
 
 const StackError = ModernError.subclass('StackBaseError', {
