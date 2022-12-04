@@ -1,4 +1,4 @@
-import { expectType, expectError } from 'tsd'
+import { expectType } from 'tsd'
 
 import ModernError from 'modern-errors'
 import modernErrorsClean from 'modern-errors-clean'
@@ -8,11 +8,10 @@ const BaseError = ModernError.subclass('BaseError', {
 })
 const error = new BaseError('')
 
-expectError(
-  ModernError.subclass('TestError', {
-    plugins: [modernErrorsClean],
-    stack: undefined,
-  }),
-)
+ModernError.subclass('TestError', {
+  plugins: [modernErrorsClean],
+  // @ts-expect-error
+  stack: undefined,
+})
 
 expectType<string | undefined>(error.stack)
