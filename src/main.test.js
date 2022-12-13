@@ -16,9 +16,8 @@ const noStackError = new NoStackError('test')
 const cwd = getCwd()
 
 // The first lines sometimes contain a preview
-const isCleanStack = function (stack) {
-  return !stack.split('\n').slice(1).join('\n').includes(cwd)
-}
+const isCleanStack = (stack) =>
+  !stack.split('\n').slice(1).join('\n').includes(cwd)
 
 test('stack is cleaned', (t) => {
   t.false(isCleanStack(noStackError.stack))
