@@ -21,12 +21,6 @@ const isCleanStack = (stack) =>
   !stack.split('\n').slice(1).join('\n').includes(repoName)
 
 test('stack is cleaned', (t) => {
-  // eslint-disable-next-line no-console, no-restricted-globals
-  console.log({ repoName })
-  // eslint-disable-next-line no-console, no-restricted-globals
-  console.log({ one: noStackError.stack })
-  // eslint-disable-next-line no-console, no-restricted-globals
-  console.log({ two: stackError.stack })
   t.false(isCleanStack(noStackError.stack))
   t.true(isCleanStack(stackError.stack))
 })
