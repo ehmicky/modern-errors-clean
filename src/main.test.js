@@ -1,3 +1,4 @@
+import { basename } from 'node:path'
 import { cwd as getCwd } from 'node:process'
 
 import test from 'ava'
@@ -13,15 +14,15 @@ const stackError = new StackError('test')
 const NoStackError = ModernError.subclass('NoStackBaseError')
 const noStackError = new NoStackError('test')
 
-const cwd = getCwd()
+const repoName = basename(getCwd())
 
 // The first lines sometimes contain a preview
 const isCleanStack = (stack) =>
-  !stack.split('\n').slice(1).join('\n').includes(cwd)
+  !stack.split('\n').slice(1).join('\n').includes(repoName)
 
 test('stack is cleaned', (t) => {
   // eslint-disable-next-line no-console, no-restricted-globals
-  console.log({ cwd })
+  console.log({ repoName })
   // eslint-disable-next-line no-console, no-restricted-globals
   console.log({ one: noStackError.stack })
   // eslint-disable-next-line no-console, no-restricted-globals
