@@ -63,7 +63,7 @@ Error: message
 npm install modern-errors-clean
 ```
 
-This package requires Node.js >=14.18.0.
+This package requires Node.js >=16.17.0.
 
 This is an ES module. It must be loaded using
 [an `import` or `import()` statement](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c),
