@@ -1,7 +1,6 @@
 import ModernError from 'modern-errors'
-import { expectType } from 'tsd'
-
 import modernErrorsClean from 'modern-errors-clean'
+import { expectType } from 'tsd'
 
 const BaseError = ModernError.subclass('BaseError', {
   plugins: [modernErrorsClean],
