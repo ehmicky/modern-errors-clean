@@ -54,7 +54,7 @@
     "clean-stack": "^5.1.0"
   },
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^2.0.86"
+    "@ehmicky/dev-tasks": "^2.0.87"
   },
   "peerDependencies": {
     "modern-errors": "^6.0.0"
