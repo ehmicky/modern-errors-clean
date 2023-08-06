@@ -42,7 +42,10 @@
   ],
   "license": "MIT",
   "homepage": "https://www.github.com/ehmicky/modern-errors-clean",
-  "repository": "ehmicky/modern-errors-clean",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehmicky/modern-errors-clean.git"
+  },
   "bugs": {
     "url": "https://github.com/ehmicky/modern-errors-clean/issues"
   },
