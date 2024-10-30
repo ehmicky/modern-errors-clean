@@ -57,7 +57,8 @@
     "clean-stack": "^5.1.0"
   },
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^3.0.19"
+    "@ehmicky/dev-tasks": "^3.0.19",
+    "@ehmicky/eslint-config": "^20.0.0"
   },
   "peerDependencies": {
     "modern-errors": "^7.0.1"
