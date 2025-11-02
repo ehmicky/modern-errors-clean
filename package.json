@@ -54,7 +54,7 @@
     "lib": "src"
   },
   "dependencies": {
-    "clean-stack": "^5.1.0"
+    "clean-stack": "^6.0.0"
   },
   "devDependencies": {
     "@ehmicky/dev-tasks": "^3.0.34",
